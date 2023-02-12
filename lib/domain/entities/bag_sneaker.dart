@@ -13,11 +13,11 @@ class BagSneaker {
   int count;
   final String name;
   final String image;
-  final double price;
+  final int price;
 
-  double get total => price * count;
+  int get total => price * count;
 
-  String get totalAsCurrency => total.toCurrency();
+  String get totalAsCurrency => total.toString(); //total.toCurrency();
 }
 
 class BagDetails {

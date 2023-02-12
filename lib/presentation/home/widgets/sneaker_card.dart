@@ -22,6 +22,7 @@ class SneakerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final estimatedColor = sneaker.estimatedColor;
     final cardRotateAngle = -pi / 10 * size;
+    final timestamp = DateTime.now().millisecondsSinceEpoch;
 
     return Stack(
       children: [
@@ -42,12 +43,11 @@ class SneakerCard extends StatelessWidget {
               child: Stack(
                 children: [
                   HeroColor(
-                    tag: '${sneaker.id}color',
+                    tag: '${sneaker.id}${timestamp}color',
                     child: Container(
                       margin: const EdgeInsets.only(right: 36),
                       decoration: BoxDecoration(
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(16)),
+                        borderRadius: const BorderRadius.all(Radius.circular(16)),
                         color: sneaker.color,
                       ),
                       padding: const EdgeInsets.all(24),
@@ -60,8 +60,7 @@ class SneakerCard extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8),
-                            child: LargeTitle(sneaker.shortName.toUpperCase(),
-                                color: estimatedColor),
+                            child: LargeTitle(sneaker.shortName.toUpperCase(), color: estimatedColor),
                           ),
                           Text(
                             sneaker.priceAsCurrency,
@@ -111,7 +110,7 @@ class SneakerCard extends StatelessWidget {
               );
             },
             child: (tappedDown) => HeroImage(
-              tag: '${sneaker.id}image',
+              tag: '${sneaker.id}${timestamp}image',
               child: AnimatedScale(
                 scale: tappedDown ? 0.8 : 1.0,
                 duration: const Duration(milliseconds: 100),

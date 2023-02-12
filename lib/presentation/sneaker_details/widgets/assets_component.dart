@@ -16,8 +16,7 @@ class AssetsComponent extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          for (var i = 0; i < assets.length && i < 4; i++)
-            Flexible(child: _factory(assets[i])),
+          for (var i = 0; i < assets.length && i < 4; i++) Flexible(child: _factory(assets[i])),
         ],
       ),
     );

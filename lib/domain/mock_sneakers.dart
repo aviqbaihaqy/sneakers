@@ -5,7 +5,7 @@ import 'package:sneakers/domain/entities/sneaker.dart';
 import 'package:sneakers/domain/entities/sneakers.dart';
 import 'package:sneakers/resources/resources.dart';
 
-const mockSneakers = Sneakers(
+final mockSneakersX = Sneakers(
   brands: [
     Brand(
       id: 1,
@@ -39,7 +39,7 @@ const mockSneakers = Sneakers(
           ],
           description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-          sizes: [7.5, 8, 9.5, 10, 12],
+          sizes: [7, 8, 9, 10, 12],
         ),
         Sneaker(
           id: 2,
@@ -69,7 +69,7 @@ const mockSneakers = Sneakers(
           ],
           description:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-          sizes: [7.5, 8, 9.5, 10, 12],
+          sizes: [7, 8, 9, 10, 12],
         ),
         ..._moreMockSneakers,
       ],
@@ -79,24 +79,36 @@ const mockSneakers = Sneakers(
     Brand(
       id: 2,
       name: 'Adidas',
+      featured: [],
+      newModels: [],
+      upcoming: [],
     ),
     Brand(
       id: 3,
       name: 'Jordan',
+      featured: [],
+      newModels: [],
+      upcoming: [],
     ),
     Brand(
       id: 4,
       name: 'Puma',
+      featured: [],
+      newModels: [],
+      upcoming: [],
     ),
     Brand(
       id: 5,
       name: 'Reebok',
+      featured: [],
+      newModels: [],
+      upcoming: [],
     ),
   ],
   more: _moreMockSneakers,
 );
 
-const _moreMockSneakers = [
+final _moreMockSneakers = [
   Sneaker(
     id: 3,
     shortName: 'Air-Force',
@@ -125,7 +137,7 @@ const _moreMockSneakers = [
     ],
     description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    sizes: [7.5, 8, 9.5, 10, 12],
+    sizes: [7, 8, 9, 10, 12],
   ),
   Sneaker(
     id: 4,
@@ -155,6 +167,6 @@ const _moreMockSneakers = [
     ],
     description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    sizes: [7.5, 8, 9.5, 10, 12],
+    sizes: [7, 8, 9, 10, 12],
   ),
 ];

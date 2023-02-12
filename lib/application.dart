@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sneakers/core/routes/routes.dart';
 import 'package:sneakers/core/theme/custom_theme_data.dart';
+import 'package:sneakers/domain/network_service.dart';
+import 'package:sneakers/domain/repository.dart';
 import 'package:sneakers/presentation/bag/cubit/bag_cubit.dart';
 import 'package:sneakers/presentation/home/cubit/brand_cubit.dart';
+import 'package:sneakers/presentation/home/cubit/selected_cubit.dart';
 import 'package:sneakers/presentation/home/cubit/sneaker_type_cubit.dart';
 import 'package:sneakers/presentation/main/cubit/page_cubit.dart';
 
@@ -12,13 +15,20 @@ class Application extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Repository repository = Repository(networkService: NetworkService());
+
     return MultiBlocProvider(
       providers: [
         BlocProvider(
           create: (context) => PageCubit(),
         ),
         BlocProvider(
-          create: (context) => BrandCubit(),
+          create: (context) => BrandCubit(
+            repository: repository,
+          ),
+        ),
+        BlocProvider(
+          create: (context) => SelectedCubit(),
         ),
         BlocProvider(
           create: (context) => SneakerTypeCubit(),

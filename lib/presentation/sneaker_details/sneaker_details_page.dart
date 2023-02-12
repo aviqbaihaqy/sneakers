@@ -54,7 +54,7 @@ class _SneakerDetailsPageState extends State<SneakerDetailsPage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
-                              AssetsComponent(assets: widget.sneaker.assets),
+                              AssetsComponent(assets: widget.sneaker.assets!),
                               const Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 16),
                                 child: Divider(thickness: 3),
@@ -62,19 +62,18 @@ class _SneakerDetailsPageState extends State<SneakerDetailsPage> {
                               Padding(
                                 padding: const EdgeInsets.all(16),
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    LargeTitle(widget.sneaker.name),
+                                    LargeTitle(widget.sneaker.name!),
                                     LargeTitle(widget.sneaker.priceAsCurrency),
                                   ],
                                 ),
                               ),
                               DescriptionComponent(
-                                description: widget.sneaker.description,
+                                description: widget.sneaker.description!,
                               ),
                               const SizedBox(height: 24),
-                              SizesComponent(sizes: widget.sneaker.sizes),
+                              // SizesComponent(sizes: widget.sneaker.sizes),
                             ],
                           ),
                         ),

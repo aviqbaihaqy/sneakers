@@ -13,11 +13,7 @@ class SneakersContent extends StatelessWidget {
 
   final Brand brand;
 
-  static const sneakerTypes = [
-    SneakerType.upcoming,
-    SneakerType.featured,
-    SneakerType.newModel
-  ];
+  static const sneakerTypes = [SneakerType.upcoming, SneakerType.featured, SneakerType.newModel];
 
   @override
   Widget build(BuildContext context) {
@@ -41,16 +37,13 @@ class SneakersContent extends StatelessWidget {
                       child: RotatedBox(
                         quarterTurns: -1,
                         child: TextButton(
-                          onPressed: () =>
-                              context.read<SneakerTypeCubit>().updateIndex(i),
+                          onPressed: () => context.read<SneakerTypeCubit>().updateIndex(i),
                           child: Text(
                             sneakerTypes[i].name,
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
-                              color: i == activeTypeIndex
-                                  ? Colors.black
-                                  : Colors.grey[400],
+                              color: i == activeTypeIndex ? Colors.black : Colors.grey[400],
                             ),
                           ),
                         ),
@@ -59,7 +52,7 @@ class SneakersContent extends StatelessWidget {
                 ],
               ),
             ),
-            if (sneakers.isNotEmpty) SneakersView(sneakers: sneakers),
+            if (sneakers!.isNotEmpty) SneakersView(sneakers: sneakers),
           ],
         );
       },
