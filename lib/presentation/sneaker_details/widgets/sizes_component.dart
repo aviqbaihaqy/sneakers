@@ -5,14 +5,14 @@ import 'package:sneakers/presentation/widgets/large_title.dart';
 class SizesComponent extends StatefulWidget {
   const SizesComponent({required this.sizes, super.key});
 
-  final List<double> sizes;
+  final List<int> sizes;
 
   @override
   State<SizesComponent> createState() => _SizesComponentState();
 }
 
 class _SizesComponentState extends State<SizesComponent> {
-  double? _currentSize;
+  int? _currentSize;
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +75,7 @@ class _SizesComponentState extends State<SizesComponent> {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 24),
                       child: Text(
-                        size.cutTrailingZeros(),
+                        size.toString(), //size.cutTrailingZeros(),
                         style: const TextStyle(fontSize: 20),
                       ),
                     ),

@@ -4,7 +4,7 @@ import 'package:sneakers/domain/entities/sneaker.dart';
 import 'package:sneakers/presentation/bag/cubit/bag_cubit.dart';
 import 'package:sneakers/presentation/sneaker_details/widgets/assets_component.dart';
 import 'package:sneakers/presentation/sneaker_details/widgets/description_component.dart';
-import 'package:sneakers/presentation/sneaker_details/widgets/sizes_somponent.dart';
+import 'package:sneakers/presentation/sneaker_details/widgets/sizes_component.dart';
 import 'package:sneakers/presentation/sneaker_details/widgets/sneaker_details_app_bar.dart';
 import 'package:sneakers/presentation/widgets/large_title.dart';
 import 'package:sneakers/presentation/widgets/primary_button.dart';
@@ -73,7 +73,7 @@ class _SneakerDetailsPageState extends State<SneakerDetailsPage> {
                                 description: widget.sneaker.description!,
                               ),
                               const SizedBox(height: 24),
-                              // SizesComponent(sizes: widget.sneaker.sizes),
+                              SizesComponent(sizes: widget.sneaker.sizes),
                             ],
                           ),
                         ),
