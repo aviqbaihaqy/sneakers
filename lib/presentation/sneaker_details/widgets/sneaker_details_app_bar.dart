@@ -25,7 +25,7 @@ class SneakerDetailsAppBar extends StatelessWidget {
         onPressed: () => Navigator.pop(context),
       ),
       title: Text(
-        sneaker.brandName!,
+        sneaker.brandName,
         style: TextStyle(
           fontSize: 24,
           color: sneaker.estimatedColor,
